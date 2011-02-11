@@ -1,0 +1,44 @@
+= McAfeeSiteAdvisor
+
+The following is implementation of McAfee Site Advisor Written in Ruby
+
+Feeded with urls the following will display McAfee verdict on the same
+ 
+Just Simply do this 
+
+sudo gem install mcafee-site-advisor
+ > irb
+ require "rubygems"
+ require "mcafee_site_advisor"
+ 
+ McafeeSiteAdvisor.report("http://www.gumblar.cn") 
+ ## => ["unsafe"]
+
+ There are other handy method like
+ ## Tell Waht McAfee description or the urls
+ 
+ McafeeSiteAdvisor.description("http://www.gumblar.cn") 
+ ## => ["McAfee TrustedSource web reputation analysis found potential security risks with this site. Use with extreme caution."]
+ 
+ McafeeSiteAdvsior.metadata("http://www.gumblar.cn") 
+ ## => [{"report" => "unsafe" ,"description" => "McAfee TrustedSource web reputation analysis found potential security risks with this site. Use with extreme caution."}  ]
+ 
+ 
+ There is provision to send 10 urls at max
+== Contributing to McAfeeSiteAdvisor
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Viren Negi. See LICENSE.txt for
+further details.
+
+
+  
